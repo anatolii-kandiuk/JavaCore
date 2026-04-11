@@ -1,7 +1,10 @@
 public class Megaphone {
     public static void main(String[] args) {
         // See Learn the Part for the instructions.
-        // Start
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.print("If Java was easy, they would call it Python!");
+        }
     }
     
 }
