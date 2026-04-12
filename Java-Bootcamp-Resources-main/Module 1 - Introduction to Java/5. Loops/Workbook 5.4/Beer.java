@@ -5,7 +5,7 @@ public class Beer {
     }
 
     /**
-     * Function name -- sing. <------
+     * Function name -- sing.
      * @param i (int)
      *
      *
