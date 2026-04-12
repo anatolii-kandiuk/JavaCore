@@ -11,6 +11,8 @@ public class Detention {
         for (int i = 0; i < 100; i++) {
             System.out.println(i + ". " + line);
         }
+
+        input.close();
         
     }
 }
