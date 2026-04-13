@@ -7,8 +7,21 @@ public class CounterTool {
         System.out.println("Jimmy: It depends.");
         System.out.println("Oh, ok...");
 
-       // See detailed instructions on Learn the Part.
+        // See detailed instructions on Learn the Part.
+        System.out.print("Pick a number to count by: ");
+        int countBy = scan.nextInt();
 
+        System.out.print("Pick a number to start counting from: ");
+        int startFrom = scan.nextInt();
+
+        System.out.print("Pick a number to count to: ");
+        int countTo = scan.nextInt();
+
+        for (int i = startFrom; i <= countTo; i += countBy) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n");
         scan.close();
     }
 }
