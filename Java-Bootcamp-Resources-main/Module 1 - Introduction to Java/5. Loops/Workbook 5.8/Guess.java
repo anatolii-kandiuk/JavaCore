@@ -7,9 +7,16 @@ public class Guess  {
         
        Scanner scan = new Scanner(System.in);
        
-       //See Learn the Part for detailed instructions.
+       int secretNuber = 3;
+       int number = scan.nextInt();
         
-        scan.close();
+       while (number != secretNuber ) {
+            System.out.print("Guess again: ");
+            number = scan.nextInt();
+       }
+
+       System.out.println("You got it!");
+       scan.close();
     }
 
 }
