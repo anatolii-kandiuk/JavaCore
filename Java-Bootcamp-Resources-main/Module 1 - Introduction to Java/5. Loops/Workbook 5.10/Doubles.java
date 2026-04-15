@@ -1,14 +1,24 @@
 public class Doubles {
     public static void main(String[] args) {
-
-   //      See Learn the Part for instructions.
        
-        int dice1;
-        int dice2;
+        int dice1 = rollDice();
+        int dice2 = rollDice();
 
-
+        while (dice1 != dice2) {
+            System.out.println("Dice 1: " + dice1);
+            System.out.println("Dice 2: " + dice2 + "\n");
+        }
+        System.out.println("You rolled doubles!");
     }
 
+    /**
+     * Function name: rollDice -- rolls a dice between 1 and 6
+     * @return randomNumber (int)
+     *
+     */
+    private static int rollDice() {
+        return (int)(((Math.random()) * 100));
+    }
 }
 
 
