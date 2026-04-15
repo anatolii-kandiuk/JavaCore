@@ -17,7 +17,7 @@ public class Doubles {
      *
      */
     private static int rollDice() {
-        return (int)(((Math.random()) * 100));
+        return (int)(((Math.random())));
     }
 }
 
