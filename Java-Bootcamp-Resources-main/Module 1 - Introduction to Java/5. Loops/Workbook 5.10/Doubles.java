@@ -7,6 +7,8 @@ public class Doubles {
         while (dice1 != dice2) {
             System.out.println("Dice 1: " + dice1);
             System.out.println("Dice 2: " + dice2 + "\n");
+            dice1 = rollDice();
+            dice2 = rollDice();
         }
         System.out.println("You rolled doubles!");
     }
@@ -17,7 +19,7 @@ public class Doubles {
      *
      */
     private static int rollDice() {
-        return (int)(((Math.random())));
+        return (int)((Math.random() * (6 - 1)) + 1);
     }
 }
 
