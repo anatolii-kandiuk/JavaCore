@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class Pokerito {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        String userCard = randomCard();
+        String computerCard = randomCard();
+        String dealerCard = randomCard();
+        int userMatches = 0;
+        int computerMatches = 0;
 
         // Task 2: Explain the rules 
         System.out.println("Let's play Pokerito. Type anything when you're ready.\n" + //
@@ -16,25 +21,29 @@ public class Pokerito {
         scan.nextLine();
 
         // Task 3: Present the users with a card
-        System.out.println("Here's your card: \n" + randomCard());
-        System.out.println("println 'Here's the computer's card:\n" + randomCard());
-        
-        int yourMatches = 0;
-        int computerMatches = 0;
+        System.out.println("Here's your card: \n" + userCard);
+        System.out.println("println 'Here's the computer's card:\n" + computerCard);
 
         // Task 4 - Draw five cards
         System.out.println("Now, the dealer will draw five cards. Press enter to continue.");
         scan.nextLine();
 
         for (int i = 1; i <= 5; i++) {
-            System.out.println("Card " + i + "\n\n" + randomCard());
+            System.out.println("Card " + i + "\n\n" + dealerCard);
+            
+            if (userCard.equals(dealerCard)) {
+                userMatches += 1;
+            } 
+            if (computerCard.equals(dealerCard)) {
+                computerMatches += 1;
+            }
+
+            dealerCard = randomCard();
             scan.nextLine();
         }
 
         /** Task 5 - Get the winner
-         * 
-         * • Count your number of matches.
-         * • Count the computer's number of matches.
+
          * • print: Your number of matches: <yourMatches>
          * • print: Computer number of matches:  <computerMatches>
          * 
@@ -42,8 +51,17 @@ public class Pokerito {
          * • If the computer has more matches, print: The computer wins! 
          * • If the matches are equal, print: everyone wins!.
          */
-
-         scan.close();
+        System.out.println("Your number of matches: " + userMatches);
+        System.out.println("Computer number of matches: " + computerMatches);
+        
+        if (userMatches > computerMatches) {
+            System.out.println("You win!");
+        } else if (userMatches < computerMatches) {
+            System.out.println("The computer wins!");
+        } else {
+            System.out.println("Everyone wins!");
+        }
+        scan.close();
     }
 
     /** Task 1
