@@ -22,7 +22,7 @@ public class Pokerito {
 
         // Task 3: Present the users with a card
         System.out.println("Here's your card: \n" + userCard);
-        System.out.println("println 'Here's the computer's card:\n" + computerCard);
+        System.out.println("Here's the computer's card:\n" + computerCard);
 
         // Task 4 - Draw five cards
         System.out.println("Now, the dealer will draw five cards. Press enter to continue.");
@@ -178,6 +178,6 @@ public class Pokerito {
      *
      */
     private static int randomNumber() {
-        return (int)((Math.random() * (14 - 1)) + 1);
+        return (int)((Math.random() * 13) + 1);
     }
 }
