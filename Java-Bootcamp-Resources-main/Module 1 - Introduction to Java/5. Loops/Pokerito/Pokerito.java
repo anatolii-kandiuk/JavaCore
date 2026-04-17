@@ -6,25 +6,21 @@ public class Pokerito {
 
         // Task 2: Explain the rules 
         System.out.println("Let's play Pokerito. Type anything when you're ready.\n" + //
-                        "        It's like Poker, but a lot simpler.\n" + //
-                        "         • There are two players, you and the computer.\n" + //
-                        "         • The dealer will give each player one card.\n" + //
-                        "         • Then, the dealer will draw five cards (the river)\n" + //
-                        "         • The player with the most river matches wins!\n" + //
-                        "         • If the matches are equal, everyone's a winner!\n" + //
-                        "         • Ready? Type anything if you are.\n");
-       
-       
-        /*Task 3: Present the user with a card
-         println 'Here's your card:'
-         <show card>
-         <new line>
-         println 'Here's the computer's card:'
-         <show computer's card>
-        */
+                        "   It's like Poker, but a lot simpler.\n" + //
+                        "     • There are two players, you and the computer.\n" + //
+                        "     • The dealer will give each player one card.\n" + //
+                        "     • Then, the dealer will draw five cards (the river)\n" + //
+                        "     • The player with the most river matches wins!\n" + //
+                        "     • If the matches are equal, everyone's a winner!\n" + //
+                        "     • Ready? Type anything if you are.\n");
+        scan.nextLine();
 
+        // Task 3: Present the users with a card
+        System.out.println("Here's your card: \n" + randomCard());
+        System.out.println("println 'Here's the computer's card:\n" + randomCard());
+        
         int yourMatches = 0;
-        int computerMatches =0;
+        int computerMatches = 0;
 
         /** Task 4 - Draw five cards
          * 
