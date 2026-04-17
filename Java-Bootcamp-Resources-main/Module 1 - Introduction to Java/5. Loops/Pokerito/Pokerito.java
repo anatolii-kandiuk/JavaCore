@@ -6,13 +6,13 @@ public class Pokerito {
 
         // Task 2: Explain the rules 
         System.out.println("Let's play Pokerito. Type anything when you're ready.\n" + //
-                        "   It's like Poker, but a lot simpler.\n" + //
-                        "     • There are two players, you and the computer.\n" + //
-                        "     • The dealer will give each player one card.\n" + //
-                        "     • Then, the dealer will draw five cards (the river)\n" + //
-                        "     • The player with the most river matches wins!\n" + //
-                        "     • If the matches are equal, everyone's a winner!\n" + //
-                        "     • Ready? Type anything if you are.\n");
+                        "It's like Poker, but a lot simpler.\n" + //
+                        "   • There are two players, you and the computer.\n" + //
+                        "   • The dealer will give each player one card.\n" + //
+                        "   • Then, the dealer will draw five cards (the river)\n" + //
+                        "   • The player with the most river matches wins!\n" + //
+                        "   • If the matches are equal, everyone's a winner!\n" + //
+                        "   • Ready? Type anything if you are.\n");
         scan.nextLine();
 
         // Task 3: Present the users with a card
@@ -22,19 +22,14 @@ public class Pokerito {
         int yourMatches = 0;
         int computerMatches = 0;
 
-        /** Task 4 - Draw five cards
-         * 
-         * • print:  Now, the dealer will draw five cards. Press enter to continue.
-         * • The dealer will draw a card every time the user presses enter.
-         * • Before you draw a card, print the order it was drawn in:
-         *      Card 1 
-         *      <2 new lines>
-         *      <print card>
-         *      Card 2
-         *      <2 new lines>
-         *      <print card>
-         *      ...
-         */
+        // Task 4 - Draw five cards
+        System.out.println("Now, the dealer will draw five cards. Press enter to continue.");
+        scan.nextLine();
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Card " + i + "\n\n" + randomCard());
+            scan.nextLine();
+        }
 
         /** Task 5 - Get the winner
          * 
