@@ -4,23 +4,17 @@ public class Pokerito {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        /*Task 2: Explain the rules
-
-        >>Let's play Pokerito. Type anything when you're ready.
-        |
-        >>It's like Poker, but a lot simpler.
-        >> (new line)
-        >> • There are two players, you and the computer.
-        >> • The dealer will give each player one card.
-        >> • Then, the dealer will draw five cards (the river)
-        >> • The player with the most river matches wins!
-        >> • If the matches are equal, everyone's a winner!
-        >> (new line)
-        >> • Ready? Type anything if you are.
-        |
-        */
-        
-
+        // Task 2: Explain the rules 
+        System.out.println("Let's play Pokerito. Type anything when you're ready.\n" + //
+                        "        It's like Poker, but a lot simpler.\n" + //
+                        "         • There are two players, you and the computer.\n" + //
+                        "         • The dealer will give each player one card.\n" + //
+                        "         • Then, the dealer will draw five cards (the river)\n" + //
+                        "         • The player with the most river matches wins!\n" + //
+                        "         • If the matches are equal, everyone's a winner!\n" + //
+                        "         • Ready? Type anything if you are.\n");
+       
+       
         /*Task 3: Present the user with a card
          println 'Here's your card:'
          <show card>
