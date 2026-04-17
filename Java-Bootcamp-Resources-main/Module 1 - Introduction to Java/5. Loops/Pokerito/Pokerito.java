@@ -70,5 +70,16 @@ public class Pokerito {
      *   1. Gets a random number between 1 and 13.
      *   2. Returns a card that matches the random number (get the String values from cards.text).   
      */
+    private static String randomCard() {
+        return null;    
+    }
 
+    /**
+     * Function name: randomNumber -- random number between 1 and 13
+     * @return randomNumber (int)
+     *
+     */
+    private static int randomNumber() {
+        return (int)((Math.random() * (14 - 1)) + 1);
+    }
 }
