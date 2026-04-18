@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Blackjack {
 
     public static Scanner scan = new Scanner(System.in);
-    public static String firstUserCard = "";
-    public static String secondUserCard = "";
+    public static int firstUserCard = 0;
+    public static int secondUserCard = 0;
 
     public static void main(String[] args) {
         System.out.println("\nWelcome to Java Casino!");
@@ -12,12 +12,13 @@ public class Blackjack {
         System.out.println("We shall see..");
         System.out.println("..Ready? Press anything to begin!");
         scan.nextLine();
-        //Task 4 – Get two random cards.
-        //       – Print them: \n You get a \n" + <randomCard> + "\n and a \n" + <randomCard>
 
-        //Task 5 – Print the sum of your hand value.
-        //       – print: your total is: <hand value>
-
+        firstUserCard = drawRandomCard();
+        secondUserCard = drawRandomCard();
+        System.out.println("\nYou get a \n" + cardString(firstUserCard) + "\n and a \n" + cardString(secondUserCard));
+        
+        int total = Math.min(firstUserCard, 10) + Math.min(secondUserCard, 10);
+        System.out.println("Your total is: " +  total);
         
         //Task 6 – Get two random cards for the dealer.
         //       – Print: The dealer shows \n" + <first card> + "\nand has a card facing down \n" + <facedown card>
@@ -60,7 +61,7 @@ public class Blackjack {
      *   1. Returns a String drawing of the card.
      */
     private static String cardString(int cardNumber) {
-        switch (cardNumber()) {
+        switch (cardNumber) {
             case 1:
                 return "   _____\n"+
                        "  |A _  |\n"+ 
