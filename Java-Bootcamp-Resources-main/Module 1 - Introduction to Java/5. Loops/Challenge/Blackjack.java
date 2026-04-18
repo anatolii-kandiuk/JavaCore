@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class Blackjack {
 
     public static Scanner scan = new Scanner(System.in);
-    public static int firstUserCard = 0;
-    public static int secondUserCard = 0;
 
     public static void main(String[] args) {
         System.out.println("\nWelcome to Java Casino!");
@@ -13,18 +11,18 @@ public class Blackjack {
         System.out.println("..Ready? Press anything to begin!");
         scan.nextLine();
 
-        firstUserCard = drawRandomCard();
-        secondUserCard = drawRandomCard();
+        int firstUserCard = drawRandomCard();
+        int secondUserCard = drawRandomCard();
+        int userTotal = Math.min(firstUserCard, 10) + Math.min(secondUserCard, 10);
         System.out.println("\nYou get a \n" + cardString(firstUserCard) + "\n and a \n" + cardString(secondUserCard));
+        System.out.println("Your total is: " +  userTotal);
         
-        int total = Math.min(firstUserCard, 10) + Math.min(secondUserCard, 10);
-        System.out.println("Your total is: " +  total);
-        
-        //Task 6 – Get two random cards for the dealer.
-        //       – Print: The dealer shows \n" + <first card> + "\nand has a card facing down \n" + <facedown card>
-        //       – Print: \nThe dealer's total is hidden
+        int firstDealerCard = drawRandomCard();
+        int secondDealerCard = drawRandomCard();
+        int dealerTotal = Math.min(firstDealerCard, 10) + Math.min(secondDealerCard, 10);
+        System.out.println("The dealer shows \n " + cardString(firstDealerCard) + "\nand has a card facing down \\n" + faceDown());
+        System.out.println("The dealer's total is hidden");
 
-       
         //Task 8 – Keep asking the player to hit or stay (while loop).
         //       1. Every time the player hits
         //             – draw a new card.
@@ -36,7 +34,7 @@ public class Blackjack {
 
         
         //For tasks 9 to 13, see the article: Blackjack Part II. 
-         scan.close();
+        scan.close();
 
     }
 
@@ -48,7 +46,7 @@ public class Blackjack {
      *   1. Gets a random number between 1 and 13.
      *   2. Returns a card.
      */
-    private static int drawRandomCard() {
+    public static int drawRandomCard() {
         return (int)((Math.random() * 13) + 1);
     }
 
@@ -60,7 +58,7 @@ public class Blackjack {
      * Inside the function:
      *   1. Returns a String drawing of the card.
      */
-    private static String cardString(int cardNumber) {
+    public static String cardString(int cardNumber) {
         switch (cardNumber) {
             case 1:
                 return "   _____\n"+
@@ -179,5 +177,8 @@ public class Blackjack {
      *      Please write 'hit' or 'stay'
      *   3. Returns the user's option 
      */
+    public static String hitOrStay() {
+        return "";
     }
 
+}
