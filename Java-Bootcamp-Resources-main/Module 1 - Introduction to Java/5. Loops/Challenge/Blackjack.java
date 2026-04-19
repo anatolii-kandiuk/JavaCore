@@ -177,14 +177,14 @@ public class Blackjack {
      *   3. Returns the user's option 
      */
     public static String hitOrStay() {
-        String hitOrStay = "";
-        
-        while(!hitOrStay.equals("hit") || !hitOrStay.equals("stay")) {
+        while (true) {
             System.out.println("Please write 'hit' or 'stay' \n|=> ");
-            hitOrStay = scan.nextLine();
+            String answer = scan.nextLine().trim().toLowerCase();
+
+            if (answer.equals("hit") || answer.equals("stay")) {
+                return answer;
+            }
         }
-        
-        return hitOrStay;
     }
 
 }
