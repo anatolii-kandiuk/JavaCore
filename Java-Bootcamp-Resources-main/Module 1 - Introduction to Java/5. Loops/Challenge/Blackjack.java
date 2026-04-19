@@ -20,7 +20,7 @@ public class Blackjack {
         int firstDealerCard = drawRandomCard();
         int secondDealerCard = drawRandomCard();
         int dealerTotal = Math.min(firstDealerCard, 10) + Math.min(secondDealerCard, 10);
-        System.out.println("The dealer shows \n " + cardString(firstDealerCard) + "\nand has a card facing down \\n" + faceDown());
+        System.out.println("The dealer shows \n " + cardString(firstDealerCard) + "\nand has a card facing down \n" + faceDown());
         System.out.println("The dealer's total is hidden");
 
         //Task 8 – Keep asking the player to hit or stay (while loop).
@@ -32,7 +32,6 @@ public class Blackjack {
 
         //       2. Once the player stays, break the loop. 
 
-        
         //For tasks 9 to 13, see the article: Blackjack Part II. 
         scan.close();
 
@@ -178,7 +177,14 @@ public class Blackjack {
      *   3. Returns the user's option 
      */
     public static String hitOrStay() {
-        return "";
+        String hitOrStay = "";
+        
+        while(!hitOrStay.equals("hit") || !hitOrStay.equals("stay")) {
+            System.out.println("Please write 'hit' or 'stay' \n|=> ");
+            hitOrStay = scan.nextLine();
+        }
+        
+        return hitOrStay;
     }
 
 }
