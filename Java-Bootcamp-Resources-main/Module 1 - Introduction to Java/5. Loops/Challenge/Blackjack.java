@@ -166,7 +166,7 @@ public class Blackjack {
         "  |_____|\n";
     }
     
-    /** Task 7 – make a function that asks the user to hit or stay.
+    /**
      * Function name – hitOrStay
      * @return (String)
      *
